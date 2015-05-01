@@ -3,9 +3,9 @@ require 'word'
 require 'pry'
 
 describe (Word) do
-  # before() do
-  #   Word.clear()
-  # end
+  before() do
+    Word.clear()
+  end
 
   describe('#initialize', '#attr_reader') do
     it('returns a detail about a word') do
@@ -44,13 +44,13 @@ describe (Word) do
     end
   end
 
-  # describe('.find') do
-  #   it("returns a definition object by its ide number") do
-  #     test_definition = Definition.new("mini", "not-big", "little")
-  #     test_definition.save
-  #     test_definition2 = Definition.new("huge", "not_little", "large")
-  #     test_definition2.save
-  #     expect(Definition.find(test_definition2.id)).to(eq(test_definition2))
-  #   end
-  # end
+  describe('.find') do
+    it("returns a word object by its id number") do
+      test_word = Word.new("small", "English", "Europe")
+      test_word.save
+      test_word2 = Word.new("big", "English", "Europe")
+      test_word2.save
+      expect(Word.find(test_word2.id)).to(eq(test_word2))
+    end
+  end
 end
