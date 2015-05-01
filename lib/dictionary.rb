@@ -11,4 +11,7 @@ class Definition
     @id = @@definition_info.length + 1
   end
 
+  # define_method(:id) do
+  #   @id
+  # end
 end
