@@ -14,4 +14,8 @@ class Definition
   define_method(:id) do
     @id
   end
+
+  define_singleton_method(:all) do
+    @@address_info = []
+  end
 end
