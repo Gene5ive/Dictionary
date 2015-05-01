@@ -18,10 +18,10 @@ class Word
   define_singleton_method(:all) do
     @@word_info
   end
-#
-#   define_method(:save) do
-#     @@definition_info.push(self)
-#   end
+
+  define_method(:save) do
+    @@word_info.push(self)
+  end
 #
 #   define_singleton_method(:clear) do
 #     @@definition_info = []
