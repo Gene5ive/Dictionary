@@ -16,10 +16,14 @@ class Definition
   end
 
   define_singleton_method(:all) do
-    @@address_info = []
+    @@definition_info
   end
 
   define_method(:save) do
     @@definition_info.push(self)
+  end
+
+  define_singleton_method(:clear) do
+    @@definition_info = []
   end
 end
