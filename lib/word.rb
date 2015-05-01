@@ -2,13 +2,14 @@ class Word
 
   @@word_info = []
 
-  attr_reader(:word, :language, :origin)
+  attr_reader(:word, :language, :origin, :definitions)
 
   define_method(:initialize) do |word, language, origin|
     @word = word
     @language = language
     @origin = origin
     @id = @@word_info.length + 1
+    @definitions = []
   end
 
   define_method(:id) do

@@ -1,10 +1,10 @@
 <h1>My Dictionary</h1>
-<a href="/words/new">Add Word to Dictionary</a>
+<a href="/word/new">Add Word to Dictionary</a>
 
 
 <h1>Words</h1>
 <ul>
   <% @words.each() do |word| %>
-  <li><a href="/words/<%= word.id() %>"><%= word.word %></a></li>
+  <li><a href="/word/<%= word.id %>"><%= word.word %></a></li>
   <% end %>
 </ul>

@@ -10,6 +10,25 @@ get('/') do
   erb(:index)
 end
 
-get('/words/new') do
+get('/word/new') do
   erb(:word_form)
+end
+
+get('/words') do
+  @words = Word.all
+  erb(:index)
+end
+
+post('/word') do
+  word = params.fetch('word')
+  language = params.fetch('language')
+  origin = params.fetch('origin')
+  @word = Word.new(word, language, origin).save
+  @words = Word.all
+  erb(:success)
+end
+
+get('/word/:id') do
+  @word = Word.find(params.fetch('id').to_i)
+  erb(:word)
 end
