@@ -11,6 +11,7 @@ describe('path through index >>
                     index >>
                     word >>
                     definition_form >>
+                    success
                     ', {:type => :feature}) do
   it('links user to word-form page page') do
     visit('/')
@@ -18,7 +19,7 @@ describe('path through index >>
     expect(page).to have_content('Add Word')
   end
 
-  it('links user to success page') do
+  it('allows user to input word information and links user to success page') do
     visit('/words/new')
     fill_in('word', with: "small")
     fill_in('language', with: "English")
@@ -43,5 +44,12 @@ describe('path through index >>
     visit('/words/:id')
     click_link('Add Definitions')
     expect(page).to have_content('Add a definition to "small"')
+  end
+
+  it('allows user to input definition information and links user to success page') do
+    visit('/words/:id/definitions/new')
+    fill_in('Definition', with: "little")
+    click_button('Add Definition')
+    expect(page).to have_content('Success!')
   end
 end
