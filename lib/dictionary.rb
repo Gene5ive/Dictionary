@@ -26,4 +26,14 @@ class Definition
   define_singleton_method(:clear) do
     @@definition_info = []
   end
+
+  # define_singleton_method(:find) do |id|
+  #   found_def = nil
+  #   @@definition_info.each do |def|
+  #     if definition.id == id.to_i
+  #       found_def = def
+  #     end
+  #   end
+  #   found_def
+  # end
 end
