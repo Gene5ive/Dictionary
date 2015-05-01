@@ -19,13 +19,13 @@ describe (Word) do
       expect(test_word.id()).to(eq(1))
     end
   end
-  #
-  # describe('.all') do
-  #   it("is empty at first") do
-  #     expect(Definition.all).to(eq([]))
-  #   end
-  # end
-  #
+
+  describe('.all') do
+    it("is empty at first") do
+      expect(Word.all).to(eq([]))
+    end
+  end
+
   # describe('#save') do
   #   it("adds definition object to the definition class array") do
   #     test_definition = Definition.new("mini", "not_big", "little")
