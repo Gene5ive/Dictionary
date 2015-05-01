@@ -1,36 +1,36 @@
 class Word
 
-  @@word_info = []
+  @@words = []
 
-  attr_reader(:word, :language, :origin, :definitions)
+  attr_reader(:word, :language, :origin, :definitions, :id)
 
   define_method(:initialize) do |word, language, origin|
     @word = word
     @language = language
     @origin = origin
-    @id = @@word_info.length + 1
+    @id = @@words.length + 1
     @definitions = []
   end
 
-  define_method(:id) do
-    @id
+  define_method(:add_definition) do |definition|
+    @definitions.push(definition)
   end
 
   define_singleton_method(:all) do
-    @@word_info
+    @@words
   end
 
   define_method(:save) do
-    @@word_info.push(self)
+    @@words.push(self)
   end
 
   define_singleton_method(:clear) do
-    @@word_info = []
+    @@words = []
   end
 
   define_singleton_method(:find) do |id|
     found_word = nil
-    @@word_info.each do |word|
+    @@words.each do |word|
       if word.id == id.to_i
         found_word = word
       end

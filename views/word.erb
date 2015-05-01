@@ -1,15 +1,19 @@
-<h3>Here is all the information on the word "<%= @word.word %>":</h3>
+<h1>Here is all the information on the word "<%= @word.word %>":</h1>
 
-<h1><%= @word.word %></h1>
-<h1><%= @word.language %></h1>
-<h1><%= @word.origin %></h1>
+<h3>Spelling: <%= @word.word %></h3>
+<h3>Language: <%= @word.language %></h3>
+<h3>Origin: <%= @word.origin %></h3>
 
+<h3>Definitions (exponentially multiplying since my algorithm is off) :</h3>
+¯\(°_o)/¯
 <ul>
-  <% @word.definitions.each do |info| %>
-  <li><%= info.first %> <%= info.second %> <%= info.third %> %></li>
+  <% @word.definitions.each do |this| %>
+    <% this.each do |that| %>
+  <h3><%= that.definition %></h3>
+    <% end %>
   <% end %>
 </ul>
 
-<a href="/definition_form/<%= @word.id%>/definition/new">Add a New Definition</a>
+<a href="/words/<%= @word.id%>/definitions/new">Add Definitions</a>
 
 <a href="/">Return to Main Page</a>

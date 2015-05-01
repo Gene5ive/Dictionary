@@ -5,15 +5,21 @@ require('pry')
 Capybara.app = Sinatra::Application
 set(:show_exceptions, false)
 
-describe('paths from index >> word_form >> success >> index >> word', {:type => :feature}) do
+describe('path through index >>
+                    word_form >>
+                    success >>
+                    index >>
+                    word >>
+                    definition_form >>
+                    ', {:type => :feature}) do
   it('links user to word-form page page') do
     visit('/')
-    find(:xpath, "//a[@href='/word/new']").click
+    find(:xpath, "//a[@href='/words/new']").click
     expect(page).to have_content('Add Word')
   end
 
   it('links user to success page') do
-    visit('/word/new')
+    visit('/words/new')
     fill_in('word', with: "small")
     fill_in('language', with: "English")
     fill_in('origin', with: "Europe")
@@ -31,5 +37,11 @@ describe('paths from index >> word_form >> success >> index >> word', {:type => 
     visit('/')
     click_link("small")
     expect(page).to have_content('Here is all the information on the word "small"')
+  end
+
+  it('links user to definition-form page') do
+    visit('/words/:id')
+    click_link('Add Definitions')
+    expect(page).to have_content('Add a definition to "small"')
   end
 end
