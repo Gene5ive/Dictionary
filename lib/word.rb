@@ -26,14 +26,14 @@ class Word
   define_singleton_method(:clear) do
     @@word_info = []
   end
-#
-#   define_singleton_method(:find) do |id|
-#     found_word = nil
-#     @@word_info.each do |word|
-#       if word.id == id.to_i
-#         found_word = word
-#       end
-#     end
-#     word_def
-#   end
+
+  define_singleton_method(:find) do |id|
+    found_word = nil
+    @@word_info.each do |word|
+      if word.id == id.to_i
+        found_word = word
+      end
+    end
+    found_word
+  end
 end
