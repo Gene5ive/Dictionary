@@ -5,7 +5,7 @@ require 'pry'
 describe (Definition) do
 
   describe('#initialize', '#attr_reader') do
-    it('returns a list of definitions') do
+    it('returns a definition') do
       test_definition = Definition.new("mini", "not-big", "little")
       expect(test_definition.first).to(eq("mini"))
       expect(test_definition.second).to(eq("not-big"))
