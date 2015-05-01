@@ -10,11 +10,11 @@ class Word
     @origin = origin
     @id = @@word_info.length + 1
   end
-#
-#   define_method(:id) do
-#     @id
-#   end
-#
+
+  define_method(:id) do
+    @id
+  end
+
 #   define_singleton_method(:all) do
 #     @@definition_info
 #   end

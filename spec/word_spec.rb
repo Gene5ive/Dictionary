@@ -2,7 +2,7 @@ require 'rspec'
 require 'word'
 require 'pry'
 
-describe (Definition) do
+describe (Word) do
 
   describe('#initialize', '#attr_reader') do
     it('returns a detail about a word') do
