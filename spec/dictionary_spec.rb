@@ -33,9 +33,11 @@ describe (Definition) do
     end
   end
 
-  # describe('.clear') do
-  #   it("clear the definitions from memory") do
-  #     Definition.new("mini", "not_big", "little")
-  #     Definition.clear()
-  #     expect(Definition.all()).to(eq([]))
+  describe('.clear') do
+    it("clear the definitions from memory") do
+      Definition.new("mini", "not_big", "little")
+      Definition.clear()
+      expect(Definition.all()).to(eq([]))
+    end
+  end
 end
