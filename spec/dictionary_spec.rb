@@ -1,5 +1,5 @@
 require 'rspec'
-require 'dictionary'
+require 'definition'
 require 'pry'
 
 describe (Definition) do
@@ -47,7 +47,7 @@ describe (Definition) do
       test_definition.save
       test_definition2 = Definition.new("huge", "not_little", "large")
       test_definition2.save
-      expect(Definition.find(test_definition.id(2))).to(eq(test_definition2))
+      expect(Definition.find(test_definition2.id)).to(eq(test_definition2))
     end
   end
 end
