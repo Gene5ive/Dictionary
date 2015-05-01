@@ -7,9 +7,9 @@ describe (Definition) do
   describe('#initialize', '#attr_reader') do
     it('returns a detail about a word') do
       test_word = Word.new("small", "English", "Europe")
-      expect(test_definition.first).to(eq("small"))
-      expect(test_definition.second).to(eq("English"))
-      expect(test_definition.third).to(eq("Europe"))
+      expect(test_word.word).to(eq("small"))
+      expect(test_word.language).to(eq("English"))
+      expect(test_word.origin).to(eq("Europe"))
     end
   end
 

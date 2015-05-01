@@ -1,15 +1,15 @@
 class Word
-#
-#   @@word_info = []
-#
-#   attr_reader(:word, :language, :origin)
-#
-#   define_method(:initialize) do |word, language, origin|
-#     @word = word
-#     @language = language
-#     @origin = origin
-#     @id = @@word_info.length + 1
-#   end
+
+  @@word_info = []
+
+  attr_reader(:word, :language, :origin)
+
+  define_method(:initialize) do |word, language, origin|
+    @word = word
+    @language = language
+    @origin = origin
+    @id = @@word_info.length + 1
+  end
 #
 #   define_method(:id) do
 #     @id
