@@ -35,15 +35,15 @@ describe (Word) do
       test_word.save
     end
   end
-  #
-  # describe('.clear') do
-  #   it("clear the definitions from memory") do
-  #     Definition.new("mini", "not_big", "little")
-  #     Definition.clear
-  #     expect(Definition.all).to(eq([]))
-  #   end
-  # end
-  #
+
+  describe('.clear') do
+    it("clear the words from memory") do
+      Word.new("small", "English", "Europe")
+      Word.clear
+      expect(Word.all).to(eq([]))
+    end
+  end
+
   # describe('.find') do
   #   it("returns a definition object by its ide number") do
   #     test_definition = Definition.new("mini", "not-big", "little")
