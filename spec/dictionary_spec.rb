@@ -14,7 +14,7 @@ describe (Definition) do
   end
 
   describe('#id') do
-    it('returns the id of the definition list') do
+    it("returns the id of the definition list") do
       test_definition = Definition.new("mini,", "not-big", "little")
       expect(test_definition.id()).to(eq(1))
     end
@@ -25,4 +25,17 @@ describe (Definition) do
       expect(Definition.all()).to(eq([]))
     end
   end
+
+  describe('#save') do
+    it("adds definition object to the definition class array") do
+      test_definition = Definition.new("mini", "not_big", "little")
+      test_definition.save()
+    end
+  end
+
+  # describe('.clear') do
+  #   it("clear the definitions from memory") do
+  #     Definition.new("mini", "not_big", "little")
+  #     Definition.clear()
+  #     expect(Definition.all()).to(eq([]))
 end
