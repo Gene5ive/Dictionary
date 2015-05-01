@@ -29,12 +29,12 @@ describe (Word) do
     end
   end
 
-  # describe('#save') do
-  #   it("adds definition object to the definition class array") do
-  #     test_definition = Definition.new("mini", "not_big", "little")
-  #     test_definition.save
-  #   end
-  # end
+  describe('#save') do
+    it("adds word object to the word class array") do
+      test_word = Word.new("small", "English", "Europe")
+      test_word.save
+    end
+  end
   #
   # describe('.clear') do
   #   it("clear the definitions from memory") do

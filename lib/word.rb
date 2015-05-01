@@ -15,9 +15,9 @@ class Word
     @id
   end
 
-#   define_singleton_method(:all) do
-#     @@definition_info
-#   end
+  define_singleton_method(:all) do
+    @@word_info
+  end
 #
 #   define_method(:save) do
 #     @@definition_info.push(self)
