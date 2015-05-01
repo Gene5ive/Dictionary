@@ -22,10 +22,10 @@ class Word
   define_method(:save) do
     @@word_info.push(self)
   end
-#
-#   define_singleton_method(:clear) do
-#     @@definition_info = []
-#   end
+
+  define_singleton_method(:clear) do
+    @@word_info = []
+  end
 #
 #   define_singleton_method(:find) do |id|
 #     found_word = nil
