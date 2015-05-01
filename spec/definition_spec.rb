@@ -14,7 +14,7 @@ describe (Definition) do
   end
 
   describe('#id') do
-    it("returns the id of the definition list") do
+    it("returns the id of the definition") do
       test_definition = Definition.new("mini,", "not-big", "little")
       expect(test_definition.id()).to(eq(1))
     end

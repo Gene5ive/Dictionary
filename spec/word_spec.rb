@@ -13,12 +13,12 @@ describe (Definition) do
     end
   end
 
-  # describe('#id') do
-  #   it("returns the id of the definition list") do
-  #     test_definition = Definition.new("mini,", "not-big", "little")
-  #     expect(test_definition.id()).to(eq(1))
-  #   end
-  # end
+  describe('#id') do
+    it("returns the id of the word") do
+      test_word = Word.new("small,", "English", "Europe")
+      expect(test_word.id()).to(eq(1))
+    end
+  end
   #
   # describe('.all') do
   #   it("is empty at first") do
