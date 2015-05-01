@@ -10,6 +10,7 @@ app.rb
 Gemfile
 Gemfile.lock
 README.md
+config.ru
 lib/definition.rb
   /word.rb
 spec/definition_spec.rb
