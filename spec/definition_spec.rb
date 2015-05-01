@@ -3,6 +3,9 @@ require 'definition'
 require 'pry'
 
 describe (Definition) do
+  before() do
+    Definition.clear()
+  end
 
   describe('#initialize', '#attr_reader') do
     it('returns a definition') do

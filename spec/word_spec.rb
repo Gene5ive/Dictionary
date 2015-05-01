@@ -3,6 +3,9 @@ require 'word'
 require 'pry'
 
 describe (Word) do
+  # before() do
+  #   Word.clear()
+  # end
 
   describe('#initialize', '#attr_reader') do
     it('returns a detail about a word') do
